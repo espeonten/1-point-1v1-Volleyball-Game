@@ -79,8 +79,14 @@ function draw() {
 
 
     if(ball.isTouching(opp)){
-        ball.velocityX= -13
-        ball.velocityY= -15
+        if(ball.x >width/2 && ball.x <width/1.3){
+            ball.velocityX= -3
+            ball.velocityY= -15
+        }
+        if(ball.x >width/1.3 && ball.x <width){
+            ball.velocityX= -15
+            ball.velocityY= -15
+        }
     }
 
     if(ball.collide(edges[0])){
