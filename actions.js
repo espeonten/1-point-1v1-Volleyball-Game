@@ -7,7 +7,7 @@ function action(){
         }
     }
     else if(pAction == "serve"){
-        ball.velocityX= 10
+        //ball.velocityX= 10
         ball.velocityY= -15
         pAction = "play"
         lastPersonWhoHitTheBall = "p"
@@ -17,9 +17,13 @@ function action(){
                 if(keyDown("space")){
                     if(p.y<900.4){
                         ball.velocityX= 10
-                        ball.velocityY = 15
+                        ball.velocityY = 8
                         lastPersonWhoHitTheBall = "p"
                     }
+                }
+                else if(keyDown("shift")){
+                    ball.velocityX= 15
+                    ball.velocityY=-3
                 }
                 else if(keyDown("down")){
                     ball.velocityX= 10
